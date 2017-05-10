@@ -10,7 +10,7 @@ function HistoricalTelemetryPlugin() {
             },
             request: function (domainObject, options) {
                 var url = 'http://localhost:8081/telemetry/' +
-                    domainObject.telemetry.key +
+                    domainObject.identifier.key +
                     '?start=' + options.start +
                     '&end=' + options.end;
 
