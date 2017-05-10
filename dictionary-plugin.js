@@ -23,7 +23,9 @@ var objectProvider = {
                     identifier: identifier,
                     name: measurement.name,
                     type: 'example.telemetry',
-                    telemetry: measurement,
+                    telemetry: {
+                        values: measurement.values
+                    },
                     location: 'example.taxonomy:spacecraft'
                 };
             }
