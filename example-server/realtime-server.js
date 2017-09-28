@@ -6,8 +6,8 @@ function RealtimeServer(spacecraft) {
 
     router.ws('/', function (ws) {
         var unlisten = spacecraft.listen(notifySubscribers);
-            subscribed = {}, // Active subscriptions for this connection
-            handlers = { // Handlers for specific requests
+        var subscribed = {}; // Active subscriptions for this connection
+        var handlers = { // Handlers for specific requests
                 subscribe: function (id) {
                     subscribed[id] = true;
                 },

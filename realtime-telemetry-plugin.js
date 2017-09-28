@@ -17,7 +17,7 @@ function RealtimeTelemetryPlugin() {
             supportsSubscribe: function (domainObject) {
                 return domainObject.type === 'example.telemetry';
             },
-            subscribe: function (domainObject, callback, options) {
+            subscribe: function (domainObject, callback) {
                 listener[domainObject.identifier.key] = callback;
                 socket.send('subscribe ' + domainObject.identifier.key);
                 return function unsubscribe() {
